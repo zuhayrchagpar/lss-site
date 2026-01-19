@@ -29,10 +29,12 @@
   margin-bottom: 30px;
 }
 
-.logo-placeholder {
-  display: inline-block;
-  color: white;
+.logo {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
   animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
 @keyframes float {
