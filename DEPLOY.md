@@ -1,12 +1,13 @@
 # Deploying to GitHub Pages
 
-This guide will help you deploy your static React site to GitHub Pages using the built files from the `dist` folder.
+This guide will help you deploy your static React site to GitHub Pages using the `gh-pages` package.
 
 ## Prerequisites
 
 1. A GitHub account
 2. Git installed on your computer
 3. The repository pushed to GitHub
+4. Install dependencies: `npm install`
 
 ## Step-by-Step Instructions
 
@@ -24,62 +25,65 @@ This guide will help you deploy your static React site to GitHub Pages using the
    base: '/test-react-1/',
    ```
 
-### 2. Build Your Site
+### 2. Deploy to GitHub Pages
 
-Run the build command to create the static files:
+The `gh-pages` package makes deployment easy:
 
-```bash
-npm run build
-```
-
-This creates a `dist` folder with all the static files ready for deployment.
-
-### 3. Deploy to GitHub Pages
-
-1. **Build your site** (if you haven't already):
+1. **Build and deploy** in one command:
    ```bash
-   npm run build
+   npm run deploy
    ```
 
-2. **Commit the `dist` folder**:
-   ```bash
-   git add dist
-   git commit -m "Deploy to GitHub Pages"
-   git push
-   ```
+   This will:
+   - Build your site (`npm run build`)
+   - Deploy the `dist` folder to the `gh-pages` branch
+   - Push to GitHub automatically
 
-3. **Enable GitHub Pages:**
+2. **Enable GitHub Pages** (first time only):
    - Go to your repository on GitHub
    - Click **Settings** (top menu)
    - Scroll down to **Pages** in the left sidebar
    - Under **Source**, select **Deploy from a branch**
-   - Choose **main** branch and **/dist** folder (not root!)
+   - Choose **gh-pages** branch and **/ (root)** folder
    - Click **Save**
 
-### 4. Access Your Site
+### 3. Access Your Site
 
 After deployment (may take a few minutes), your site will be available at:
 - `https://your-username.github.io/repo-name/` (if repo has a custom name)
 - `https://your-username.github.io/` (if repo is `username.github.io`)
 
-### 5. Updating Your Site
+### 4. Updating Your Site
 
 Whenever you make changes:
 
 1. Make your changes to the source code
-2. Build: `npm run build`
-3. Commit and push the updated `dist` folder:
-   ```bash
-   git add dist
-   git commit -m "Update site"
-   git push
-   ```
+2. Deploy: `npm run deploy`
+
+That's it! The `gh-pages` package handles everything automatically.
+
+## Manual Deployment (Alternative)
+
+If you prefer to deploy manually without the npm script:
+
+```bash
+npm run build
+npx gh-pages -d dist
+```
+
+Or with a custom commit message:
+
+```bash
+npm run build
+npx gh-pages -d dist -m "Your custom commit message"
+```
 
 ## Troubleshooting
 
 - **404 errors**: Make sure the `base` path in `vite.config.js` matches your repository name exactly
 - **Assets not loading**: Check that the base path is correct and includes the trailing slash
 - **White screen**: Verify the base path matches your repo name (case-sensitive)
+- **Deployment fails**: Make sure you have push access to the repository and are authenticated with GitHub
 
 ## Custom Domain (Optional)
 
