@@ -8,5 +8,5 @@ export default defineConfig({
   // If your repo is named "username.github.io", use base: '/'
   // Otherwise, use base: '/your-repo-name/'
   // Update this to match your GitHub repository name
-  base: '/test-react-1/',
+  base: '/',
 })
