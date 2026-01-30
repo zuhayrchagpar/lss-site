@@ -22,7 +22,7 @@ function App() {
         
         <div className="links">
           <a
-            href="https://goteamup.com/consumer_required/?next=/p/12201215-london-skate-school/c/schedule%3Fstartdate%3D2025-12-01%26enddate%3D2026-01-04%26venues%3D%26category%3D%26instructors%3D%26offering_types%3D%26age_restrictions%3D" 
+            href="https://goteamup.com/p/12201215-london-skate-school/start/?next=/p/12201215-london-skate-school/c/schedule&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleAPgbUVleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAadyC9nD0BE0qyMCoDmPk_dadNEcBFLYWEIV53uHO36On43FtfiH675pNy7Nmw_aem_07yWT6gh8ltvIQu0pMGuYw"
             target="_blank"
             rel="noopener noreferrer"
             className="link booking-link"
