@@ -7,7 +7,7 @@ function App() {
       <div className="container">
         <div className="logo-container">
           <img
-            src={`${import.meta.env.BASE_URL}LSS_TRANSPARENT_COLOUR_BLACK.png`}
+            src={`${import.meta.env.BASE_URL}lss-logo.png`}
             alt="London Skate School Logo" 
             className="logo"
           />
